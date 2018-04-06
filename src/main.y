@@ -7,8 +7,6 @@ void yyerror(char *c);
 int yylex(void);
 %}
 %token INT EOL PALAVRA VIRGULA ABRE FECHA 
-%left INT
-%left VIRGULA
 
 %%
 
@@ -30,9 +28,7 @@ EXPRESSAO:
 		 |
 		 EXPRESSAO VIRGULA EXPRESSAO
 		 |
-		 ABRE EXPRESSAO FECHA
-
-		
+		 ABRE EXPRESSAO FECHA	
 
 
 %%
